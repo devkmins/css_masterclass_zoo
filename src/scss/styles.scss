@@ -1,0 +1,90 @@
+@import "_variables";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  height: 100vh;
+
+  .header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    cursor: pointer;
+
+    .header__left {
+      display: grid;
+      grid-template-columns: 1fr 7fr;
+      align-items: center;
+      font-size: 27px;
+      height: 100%;
+
+      .header__logo {
+        margin-left: 12.5px;
+      }
+
+      .header__left-nav {
+        color: $gray;
+
+        span {
+          margin-left: 30px;
+        }
+      }
+
+      &:hover {
+        background-color: $gray;
+
+        .header__left-nav {
+          color: white;
+        }
+      }
+    }
+
+    .header__right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      height: 100%;
+
+      &:hover {
+        background-color: $gray;
+      }
+
+      .header__right-nav {
+        display: flex;
+        justify-content: space-around;
+        font-size: 27px;
+      }
+
+      .header__lang {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding-top: 50px;
+
+    .main__content {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+
+      span {
+        margin-left: 15px;
+        font-size: 15px;
+      }
+    }
+  }
+}
